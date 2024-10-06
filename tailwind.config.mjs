@@ -5,6 +5,23 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+			colors: {
+				'nightblue': '#1b006b',
+				'chgreen': {
+					'50': '#eefff4',
+					'100': '#d7ffe8',
+					'200': '#b2ffd2',
+					'300': '#76ffb0',
+					'400': '#33f587',
+					'500': '#09de65',
+					'600': '#00a849',
+					'700': '#049142',
+					'800': '#0a7138',
+					'900': '#0a5d30',
+					'950': '#003418',
+				},
+
+			},
 			fontFamily: {
 				mono: ['JetBrainsMono', ...defaultTheme.fontFamily.mono],
 			},
