@@ -19,8 +19,10 @@
     }
     html {
         font-family: JetBrainsMono, ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-        background: #0a0a0a;
-        color-scheme: dark;
+        background: #f3f3f3;
+        &.dark {
+            color-scheme: dark;
+        }
     }
 
     a {
@@ -35,11 +37,6 @@
 
 @layer components {
     .bg-noise {
-        /*background: linear-gradient(30deg in oklab, #24008c, black 30%, black 70%, #003612);*/
-        /*background: linear-gradient(90deg, rgba(0,72,23,1) 0%, rgba(0,0,0,1) 24%, rgba(36,0,140,1) 100%);*/
-        /*background-color: hsl(255, 100%, 21%);*/
-        /*background-image: radial-gradient(circle farthest-side at right top, hsl(139, 100%, 14%), hsl(0, 0%, 0%) 20%, hsl(0, 0%, 0%) 65%, hsl(255, 100%, 21%));*/
-        /*background-image: url('/noise-texture.png');*/
         background-image: url('/noise.png');
     }
 }
