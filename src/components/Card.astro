@@ -1,0 +1,18 @@
+---
+import { cn } from '../utils/cn'
+
+interface Props {
+  fullWidth?: boolean
+  classes?: string[]
+}
+
+const { fullWidth, classes } = Astro.props;
+
+const defaultClasses = 'rounded-md p-6 shadow-md dark:shadow-none grow bg-neutral-200 dark:bg-neutral-900 min-h-48'
+const cardClasses = cn(defaultClasses, fullWidth ? 'max-w-full' : 'max-w-[calc(50%-8px)]', classes)
+
+---
+
+<section class={cardClasses}>
+    <slot />
+</section>

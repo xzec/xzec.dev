@@ -1,41 +1,44 @@
 ---
 import Layout from '~/layouts/Layout.astro'
 import '~/base.css'
+import Card from "~/components/Card.astro";
+
+const year = new Date().getUTCFullYear()
 ---
 
 <Layout title="xzec">
-    <header class="rounded-xl p-4 bg-noise bg-nightblue w-full flex items-center justify-between">
+    <header class="rounded-md p-4 bg-noise bg-nightblue w-full flex items-center justify-between">
         <h1 class="font-bold text-4xl leading-none">xzec</h1>
-        <div class="px-3 py-1 bg-chgreen-700 rounded-md">
-            <span class="font-bold">Available to work</span>
+        <div class="px-3 py-1 bg-chgreen-500 rounded-md">
+            <span class="font-bold text-black">Available to work</span>
         </div>
     </header>
-    <main class="flex flex-wrap gap-4 mt-4 text-neutral-300">
-        <section class="rounded-xl p-4 grow basis-[calc(50%-8px)] bg-neutral-900 min-h-48">
+    <main class="flex flex-wrap gap-2.5 py-2.5 text-neutral-300">
+        <Card>
             <h2 class="font-bold text-2xl mb-2">Juraj Žec</h2>
             <a href="https://en.wikipedia.org/wiki/Juraj"
                target="_blank"
                rel="noopener noreferrer"
                class="text-xs text-neutral-500 mb-8 block no-underline">"you-rye zhets" (Ž like the "s" in
                 "measure")</a>
-            <p class="text-sm">Software engineer<br/>27 yo<br/>originally from Slovakia</p>
-        </section>
-        <section class="rounded-xl p-4 grow basis-[calc(50%-8px)] bg-neutral-900 min-h-48">
-            <h2 class="font-bold text-xl mb-4">📍 Location</h2>
+            <p class="text-sm">Software engineer<br/>27 yo</p>
+        </Card>
+        <Card>
+            <h2 class="font-bold text-lg mb-4">📍 Location</h2>
             <p class="text-sm mb-4">Sydney<br>New South Wales, Australia</p>
             <p class="text-sm">Available for Remote/Hybrid/On-site work</p>
-        </section>
-        <section class="rounded-xl p-4 grow basis-full bg-neutral-900 min-h-48">
-            <h2 class="font-bold text-xl mb-4">What I bring to the table</h2>
+        </Card>
+        <Card fullWidth>
+            <h2 class="font-bold text-lg mb-4">What I bring to the table</h2>
             <p class="text-sm">👉 I specialize in full-stack web development, where I’m comfortable building both
                 efficient frontends and reliable backends. I have experience deploying apps to cloud and setting up
                 CI/CD pipelines. While development is my primary focus, I can also architect cloud solutions when
                 needed, primarily in AWS.</p>
             <p class="text-sm">Besides my technical skills, I love delivering high-end solutions, and I strive for
                 excellence in everything I build.</p>
-        </section>
-        <section class="rounded-xl p-4 grow basis-[calc(50%-8px)] bg-neutral-900 min-h-48">
-            <h2 class="font-bold text-xl mb-4">Last role</h2>
+        </Card>
+        <Card>
+            <h2 class="font-bold text-lg mb-4">Last role</h2>
             <p class="text-sm mb-2">For the past 5 years, I’ve been helping
                 <a href="https://www.linkedin.com/company/akular/"
                    target="_blank"
@@ -60,11 +63,15 @@ import '~/base.css'
                     <img src="/akular-app-preview.webp" alt="AKULAR app preview" width="112"/>
                 </a>
             </div>
-        </section>
-        <section class="rounded-xl p-4 grow basis-[calc(50%-8px)] bg-neutral-900 min-h-48 relative">
+        </Card>
+        <Card>
             <div class="absolute"></div>
-            <h2 class="font-bold text-xl mb-4">💁‍♂️ Get in touch</h2>
+            <h2 class="font-bold text-lg mb-4">💁‍♂️ Get in touch</h2>
             <p class="text-sm">Reach out and let's discuss how I may be of help.</p>
-        </section>
+        </Card>
     </main>
+    <footer class="w-full flex justify-between">
+        <span class="text-xs text-neutral-500">v1.0.0</span>
+        <span class="text-xs text-neutral-500">Copyright © Juraj Žec {year}</span>
+    </footer>
 </Layout>
