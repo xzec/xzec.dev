@@ -36,7 +36,7 @@
 }
 
 @layer components {
-    .bg-noise {
+    .noise {
         background-image: url('/noise.png');
     }
 }

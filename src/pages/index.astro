@@ -1,19 +1,20 @@
 ---
-import Layout from '~/layouts/Layout.astro'
 import '~/base.css'
-import Card from "~/components/Card.astro";
+import Layout from '~/layouts/Layout.astro'
+import Card from '~/components/Card.astro'
+import AustraliaIcon from '../assets/AustraliaIcon.astro'
 
 const year = new Date().getUTCFullYear()
 ---
 
 <Layout title="xzec">
-    <header class="rounded-md p-4 bg-noise bg-nightblue w-full flex items-center justify-between">
-        <h1 class="font-bold text-4xl leading-none">xzec</h1>
+    <header class="rounded-md p-4 noise bg-nightblue w-full flex items-center justify-between">
+        <h1 class="font-bold text-4xl leading-none text-white">xzec</h1>
         <div class="px-3 py-1 bg-chgreen-500 rounded-md">
             <span class="font-bold text-black">Available to work</span>
         </div>
     </header>
-    <main class="flex flex-wrap gap-2.5 py-2.5 text-neutral-300">
+    <main class="flex flex-wrap gap-4 py-4 text-neutral-800 dark:text-neutral-300">
         <Card>
             <h2 class="font-bold text-2xl mb-2">Juraj Žec</h2>
             <a href="https://en.wikipedia.org/wiki/Juraj"
@@ -23,30 +24,36 @@ const year = new Date().getUTCFullYear()
                 "measure")</a>
             <p class="text-sm">Software engineer<br/>27 yo</p>
         </Card>
-        <Card>
+        <Card class="noise bg-amber-200 relative overflow-hidden">
             <h2 class="font-bold text-lg mb-4">📍 Location</h2>
             <p class="text-sm mb-4">Sydney<br>New South Wales, Australia</p>
-            <p class="text-sm">Available for Remote/Hybrid/On-site work</p>
+            <p class="text-sm">Available for a <span class="underline decoration-dashed">Remote position</span> in
+                Australia</p>
+            <div class="absolute -top-1/2 left-1/2 w-60 h-60 rounded-full bg-amber-700 blur-3xl mix-blend-color-burn pointer-events-none"></div>
+            <div class="absolute -bottom-1/2 left-0 w-60 h-60 rounded-full bg-amber-700 blur-3xl mix-blend-color-burn pointer-events-none"></div>
+            <AustraliaIcon
+                    class="absolute w-48 h-48 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-soft-light pointer-events-none"/>
         </Card>
         <Card fullWidth>
             <h2 class="font-bold text-lg mb-4">What I bring to the table</h2>
-            <p class="text-sm">👉 I specialize in full-stack web development, where I’m comfortable building both
+            <p class="text-xs">👉 I specialize in full-stack web development, where I’m comfortable building both
                 efficient frontends and reliable backends. I have experience deploying apps to cloud and setting up
                 CI/CD pipelines. While development is my primary focus, I can also architect cloud solutions when
                 needed, primarily in AWS.</p>
-            <p class="text-sm">Besides my technical skills, I love delivering high-end solutions, and I strive for
+            <p class="text-xs">Besides my technical skills, I love delivering high-end solutions, and I strive for
                 excellence in everything I build.</p>
         </Card>
         <Card>
             <h2 class="font-bold text-lg mb-4">Last role</h2>
-            <p class="text-sm mb-2">For the past 5 years, I’ve been helping
+            <p class="text-xs mb-2">For the past 5 years, I’ve been helping
                 <a href="https://www.linkedin.com/company/akular/"
                    target="_blank"
                    rel="noopener noreferrer">AKULAR</a>
-                build a cutting-edge platform for Digital Twins enhanced with Augmented Reality. Later, I took on a
+                build a cutting-edge platform for Digital Twins enhanced with Augmented Reality. During my time, I took
+                on a
                 leadership role, heading the web development team. I've had an opportunity to work with brilliant
                 people, and also unique
-                technologies like
+                technologies such as
                 <a href="https://www.babylonjs.com/"
                    target="_blank"
                    rel="noopener noreferrer">Babylon.js</a>
@@ -56,7 +63,7 @@ const year = new Date().getUTCFullYear()
                    rel="noopener noreferrer">RxDB</a>.
             </p>
             <div class="flex gap-2 items-center justify-between">
-                <p class="text-sm">Check it out →</p>
+                <p class="text-xs">Check it out →</p>
                 <a href="https://www.linkedin.com/posts/r4pos_ai-ugcPost-7240040530905042945-SVeE"
                    target="_blank"
                    rel="noopener noreferrer">
@@ -67,11 +74,10 @@ const year = new Date().getUTCFullYear()
         <Card>
             <div class="absolute"></div>
             <h2 class="font-bold text-lg mb-4">💁‍♂️ Get in touch</h2>
-            <p class="text-sm">Reach out and let's discuss how I may be of help.</p>
+            <p class="text-xs">Reach out and let's discuss how I may be of help.</p>
         </Card>
     </main>
-    <footer class="w-full flex justify-between">
-        <span class="text-xs text-neutral-500">v1.0.0</span>
-        <span class="text-xs text-neutral-500">Copyright © Juraj Žec {year}</span>
+    <footer>
+        <span class="text-xs text-neutral-300 dark:text-neutral-500">v1.0.0 | Copyright © Juraj Žec {year}</span>
     </footer>
 </Layout>
