@@ -20,6 +20,7 @@
     html {
         font-family: JetBrainsMono, ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
         background: #f3f3f3;
+
         &.dark {
             color-scheme: dark;
         }
@@ -27,10 +28,10 @@
 
     a {
         text-decoration: underline;
-        color: #00a849;
+        color: #1e3af3;
 
         &:hover {
-            color: #33f587;
+            color: #009dff;
         }
     }
 }
@@ -38,5 +39,27 @@
 @layer components {
     .noise {
         background-image: url('/noise.png');
+    }
+}
+
+@layer utilities {
+    @keyframes blink {
+        0%, 100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+    }
+
+    .animate-blink {
+        animation: blink 1.5s steps(1) infinite;
+    }
+
+    .wavy-background {
+        background-color: #f3f3ff;
+        opacity: 0.8;
+        background-image:  linear-gradient(#efefef 1px, transparent 1px), linear-gradient(to right, #efefef 1px, #f3f3f3 1px);
+        background-size: 20px 20px;
     }
 }

@@ -7,7 +7,7 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				'nightblue': '#2f00be',
+				'nightblue': '#0020be',
 				'chgreen': {
 					'50': '#eefff4',
 					'100': '#d7ffe8',
@@ -21,7 +21,6 @@ export default {
 					'900': '#0a5d30',
 					'950': '#003418',
 				},
-
 			},
 			fontFamily: {
 				mono: ['JetBrainsMono', ...defaultTheme.fontFamily.mono],

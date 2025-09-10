@@ -1,21 +1,20 @@
 ---
 import '~/base.css'
 import Layout from '~/layouts/Layout.astro'
-import Card from '~/components/Card.astro'
+import Card from "../components/Card.astro";
 import AustraliaIcon from '../assets/AustraliaIcon.astro'
+import BigRightArrow from "../assets/BigRightArrow.astro";
 
 const year = new Date().getUTCFullYear()
 ---
 
 <Layout title="xzec">
-    <header class="rounded-md p-4 noise bg-nightblue w-full flex items-center justify-between">
+    <header class="rounded-md p-4 noise bg-nightblue w-full flex items-center">
         <h1 class="font-bold text-4xl leading-none text-white">xzec</h1>
-        <div class="px-3 py-1 bg-chgreen-500 rounded-md">
-            <span class="font-bold text-black">Available to work</span>
-        </div>
+        <div class="text-white text-2xl ml-1 animate-blink">█</div>
     </header>
     <main class="flex flex-wrap gap-4 py-4 text-neutral-800 dark:text-neutral-300">
-        <Card>
+        <Card class="noise relative overflow-hidden">
             <h2 class="font-bold text-2xl mb-2">Juraj Žec</h2>
             <a href="https://en.wikipedia.org/wiki/Juraj"
                target="_blank"
@@ -23,18 +22,18 @@ const year = new Date().getUTCFullYear()
                class="text-xs text-neutral-500 mb-8 block no-underline">"you-rye zhets" (Ž like the "s" in
                 "measure")</a>
             <p class="text-sm">Software engineer<br/>27 yo</p>
+            <div class="absolute left-1/2 -bottom-8 size-32 rounded-full bg-stone-800 mix-blend-plus-lighter blur-3xl pointer-events-none"></div>
         </Card>
         <Card class="noise bg-amber-200 relative overflow-hidden">
             <h2 class="font-bold text-lg mb-4">📍 Location</h2>
             <p class="text-sm mb-4">Sydney<br>New South Wales, Australia</p>
-            <p class="text-sm">Available for a <span class="underline decoration-dashed">Remote position</span> in
-                Australia</p>
-            <div class="absolute -top-1/2 left-1/2 w-60 h-60 rounded-full bg-amber-700 blur-3xl mix-blend-color-burn pointer-events-none"></div>
-            <div class="absolute -bottom-1/2 left-0 w-60 h-60 rounded-full bg-amber-700 blur-3xl mix-blend-color-burn pointer-events-none"></div>
+            <p class="text-sm">Available for a <span class="underline decoration-dashed">Remote position</span></p>
+            <div class="absolute -top-1/2 left-1/2 size-60 rounded-full bg-amber-700 blur-3xl mix-blend-color-burn pointer-events-none"></div>
+            <div class="absolute -bottom-1/2 left-0 size-60 rounded-full bg-amber-700 blur-3xl mix-blend-color-burn pointer-events-none"></div>
             <AustraliaIcon
                     class="absolute w-48 h-48 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-soft-light pointer-events-none"/>
         </Card>
-        <Card fullWidth>
+        <Card fullWidth class="noise relative overflow-hidden">
             <h2 class="font-bold text-lg mb-4">What I bring to the table</h2>
             <p class="text-xs">👉 I specialize in full-stack web development, where I’m comfortable building both
                 efficient frontends and reliable backends. I have experience deploying apps to cloud and setting up
@@ -42,8 +41,11 @@ const year = new Date().getUTCFullYear()
                 needed, primarily in AWS.</p>
             <p class="text-xs">Besides my technical skills, I love delivering high-end solutions, and I strive for
                 excellence in everything I build.</p>
+            <div class="absolute left-0 -top-16 size-32 rounded-full bg-stone-800 mix-blend-plus-lighter blur-3xl pointer-events-none"></div>
+            <div class="absolute left-2/3 -top-16 size-48 rounded-full bg-stone-800 mix-blend-plus-lighter blur-3xl pointer-events-none"></div>
+            <div class="absolute left-1/3 -bottom-16 size-48 rounded-full bg-stone-800 mix-blend-plus-lighter blur-3xl pointer-events-none"></div>
         </Card>
-        <Card>
+        <Card class="noise relative overflow-hidden">
             <h2 class="font-bold text-lg mb-4">Last role</h2>
             <p class="text-xs mb-2">For the past 5 years, I’ve been helping
                 <a href="https://www.linkedin.com/company/akular/"
@@ -62,22 +64,27 @@ const year = new Date().getUTCFullYear()
                    target="_blank"
                    rel="noopener noreferrer">RxDB</a>.
             </p>
-            <div class="flex gap-2 items-center justify-between">
-                <p class="text-xs">Check it out →</p>
+            <div class="flex gap-4 items-end justify-end">
+                <div class="flex flex-col items-end justify-end">
+                    <BigRightArrow class="w-16 h-16" />
+                    <p class="text-xs"><i>Check it out</i></p>
+                </div>
                 <a href="https://www.linkedin.com/posts/r4pos_ai-ugcPost-7240040530905042945-SVeE"
                    target="_blank"
                    rel="noopener noreferrer">
-                    <img src="/akular-app-preview.webp" alt="AKULAR app preview" width="112"/>
+                    <img src="/akular-app-preview.webp" alt="AKULAR app preview" width="112" class="shadow-xl transition ease-in-out hover:scale-110 duration-300 hover:rotate-1 hover:shadow-2xl" />
                 </a>
             </div>
+            <div class="absolute left-1/2 -bottom-8 size-32 rounded-full bg-stone-800 mix-blend-plus-lighter blur-3xl pointer-events-none"></div>
         </Card>
-        <Card>
+        <Card class="noise relative overflow-hidden">
             <div class="absolute"></div>
-            <h2 class="font-bold text-lg mb-4">💁‍♂️ Get in touch</h2>
+            <h2 class="font-bold text-lg mb-4">Get in touch</h2>
             <p class="text-xs">Reach out and let's discuss how I may be of help.</p>
+            <div class="absolute left-1/2 -bottom-8 size-32 rounded-full bg-stone-800 mix-blend-plus-lighter blur-3xl pointer-events-none"></div>
         </Card>
     </main>
-    <footer>
-        <span class="text-xs text-neutral-300 dark:text-neutral-500">v1.0.0 | Copyright © Juraj Žec {year}</span>
+    <footer class="flex justify-center">
+        <span class="text-xs text-neutral-400 dark:text-neutral-500">v1.0.0 | updated Nov 28, 2024 | Copyright © Juraj Žec {year}</span>
     </footer>
 </Layout>
