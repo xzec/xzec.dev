@@ -20,6 +20,9 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+      - name: Set PUBLIC_UPDATED_AT
+        run: |
+          echo PUBLIC_UPDATED_AT=$(node -p "new Date().toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric'})") >> $GITHUB_ENV
       - name: Install, build, and upload your site
         uses: withastro/action@v3
 

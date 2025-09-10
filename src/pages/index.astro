@@ -4,8 +4,10 @@ import Layout from '~/layouts/Layout.astro'
 import Card from '../components/Card.astro'
 import AustraliaIcon from '../assets/AustraliaIcon.astro'
 import BigRightArrow from '../assets/BigRightArrow.astro'
+import { PUBLIC_UPDATED_AT } from 'astro:env/client'
 
 const year = new Date().getUTCFullYear()
+const updatedAt = PUBLIC_UPDATED_AT
 ---
 
 <Layout title="xzec">
@@ -131,8 +133,8 @@ const year = new Date().getUTCFullYear()
     </Card>
   </main>
   <footer class="flex justify-center">
-    <span class="text-xs text-neutral-400 dark:text-neutral-500"
-      >v1.0.0 | updated Nov 28, 2024 | Copyright © Juraj Žec {year}</span
+    <span class="text-xs text-neutral-400 dark:text-neutral-500">
+      v1.0.0 | updated {updatedAt} | Copyright © Juraj Žec {year}</span
     >
   </footer>
 </Layout>
