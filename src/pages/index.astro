@@ -1,90 +1,141 @@
 ---
 import '~/base.css'
 import Layout from '~/layouts/Layout.astro'
-import Card from "../components/Card.astro";
+import Card from '../components/Card.astro'
 import AustraliaIcon from '../assets/AustraliaIcon.astro'
-import BigRightArrow from "../assets/BigRightArrow.astro";
+import BigRightArrow from '../assets/BigRightArrow.astro'
 
 const year = new Date().getUTCFullYear()
 ---
 
 <Layout title="xzec">
-    <header class="rounded-md p-4 noise bg-nightblue w-full flex items-center">
-        <h1 class="font-bold text-4xl leading-none text-white">xzec</h1>
-        <div class="text-white text-2xl ml-1 animate-blink">█</div>
-    </header>
-    <main class="flex flex-wrap gap-4 py-4 text-neutral-800 dark:text-neutral-300">
-        <Card class="noise relative overflow-hidden">
-            <h2 class="font-bold text-2xl mb-2">Juraj Žec</h2>
-            <a href="https://en.wikipedia.org/wiki/Juraj"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="text-xs text-neutral-500 mb-8 block no-underline">"you-rye zhets" (Ž like the "s" in
-                "measure")</a>
-            <p class="text-sm">Software engineer<br/>27 yo</p>
-            <div class="absolute left-1/2 -bottom-8 size-32 rounded-full bg-stone-800 mix-blend-plus-lighter blur-3xl pointer-events-none"></div>
-        </Card>
-        <Card class="noise bg-amber-200 relative overflow-hidden">
-            <h2 class="font-bold text-lg mb-4">📍 Location</h2>
-            <p class="text-sm mb-4">Sydney<br>New South Wales, Australia</p>
-            <p class="text-sm">Available for a <span class="underline decoration-dashed">Remote position</span></p>
-            <div class="absolute -top-1/2 left-1/2 size-60 rounded-full bg-amber-700 blur-3xl mix-blend-color-burn pointer-events-none"></div>
-            <div class="absolute -bottom-1/2 left-0 size-60 rounded-full bg-amber-700 blur-3xl mix-blend-color-burn pointer-events-none"></div>
-            <AustraliaIcon
-                    class="absolute w-48 h-48 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-soft-light pointer-events-none"/>
-        </Card>
-        <Card fullWidth class="noise relative overflow-hidden">
-            <h2 class="font-bold text-lg mb-4">What I bring to the table</h2>
-            <p class="text-xs">👉 I specialize in full-stack web development, where I’m comfortable building both
-                efficient frontends and reliable backends. I have experience deploying apps to cloud and setting up
-                CI/CD pipelines. While development is my primary focus, I can also architect cloud solutions when
-                needed, primarily in AWS.</p>
-            <p class="text-xs">Besides my technical skills, I love delivering high-end solutions, and I strive for
-                excellence in everything I build.</p>
-            <div class="absolute left-0 -top-16 size-32 rounded-full bg-stone-800 mix-blend-plus-lighter blur-3xl pointer-events-none"></div>
-            <div class="absolute left-2/3 -top-16 size-48 rounded-full bg-stone-800 mix-blend-plus-lighter blur-3xl pointer-events-none"></div>
-            <div class="absolute left-1/3 -bottom-16 size-48 rounded-full bg-stone-800 mix-blend-plus-lighter blur-3xl pointer-events-none"></div>
-        </Card>
-        <Card class="noise relative overflow-hidden">
-            <h2 class="font-bold text-lg mb-4">Last role</h2>
-            <p class="text-xs mb-2">For the past 5 years, I’ve been helping
-                <a href="https://www.linkedin.com/company/akular/"
-                   target="_blank"
-                   rel="noopener noreferrer">AKULAR</a>
-                build a cutting-edge platform for Digital Twins enhanced with Augmented Reality. During my time, I took
-                on a
-                leadership role, heading the web development team. I've had an opportunity to work with brilliant
-                people, and also unique
-                technologies such as
-                <a href="https://www.babylonjs.com/"
-                   target="_blank"
-                   rel="noopener noreferrer">Babylon.js</a>
-                and
-                <a href="https://rxdb.info/"
-                   target="_blank"
-                   rel="noopener noreferrer">RxDB</a>.
-            </p>
-            <div class="flex gap-4 items-end justify-end">
-                <div class="flex flex-col items-end justify-end">
-                    <BigRightArrow class="w-16 h-16" />
-                    <p class="text-xs"><i>Check it out</i></p>
-                </div>
-                <a href="https://www.linkedin.com/posts/r4pos_ai-ugcPost-7240040530905042945-SVeE"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    <img src="/akular-app-preview.webp" alt="AKULAR app preview" width="112" class="shadow-xl transition ease-in-out hover:scale-110 duration-300 hover:rotate-1 hover:shadow-2xl" />
-                </a>
-            </div>
-            <div class="absolute left-1/2 -bottom-8 size-32 rounded-full bg-stone-800 mix-blend-plus-lighter blur-3xl pointer-events-none"></div>
-        </Card>
-        <Card class="noise relative overflow-hidden">
-            <div class="absolute"></div>
-            <h2 class="font-bold text-lg mb-4">Get in touch</h2>
-            <p class="text-xs">Reach out and let's discuss how I may be of help.</p>
-            <div class="absolute left-1/2 -bottom-8 size-32 rounded-full bg-stone-800 mix-blend-plus-lighter blur-3xl pointer-events-none"></div>
-        </Card>
-    </main>
-    <footer class="flex justify-center">
-        <span class="text-xs text-neutral-400 dark:text-neutral-500">v1.0.0 | updated Nov 28, 2024 | Copyright © Juraj Žec {year}</span>
-    </footer>
+  <header class="noise flex w-full items-center rounded-md bg-nightblue p-4">
+    <h1 class="text-4xl font-bold leading-none text-white">xzec</h1>
+    <div class="animate-blink ml-1 text-2xl text-white">█</div>
+  </header>
+  <main
+    class="flex flex-wrap gap-4 py-4 text-neutral-800 dark:text-neutral-300"
+  >
+    <Card class="noise relative overflow-hidden">
+      <h2 class="mb-2 text-2xl font-bold">Juraj Žec</h2>
+      <a
+        href="https://en.wikipedia.org/wiki/Juraj"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mb-8 block text-xs text-neutral-500 no-underline"
+        >"you-rye zhets" (Ž like the "s" in "measure")</a
+      >
+      <p class="text-sm">Software engineer<br />27 yo</p>
+      <div
+        class="pointer-events-none absolute -bottom-8 left-1/2 size-32 rounded-full bg-stone-800 mix-blend-plus-lighter blur-3xl"
+      >
+      </div>
+    </Card>
+    <Card class="noise relative overflow-hidden bg-amber-200">
+      <h2 class="mb-4 text-lg font-bold">📍 Location</h2>
+      <p class="mb-4 text-sm">Sydney<br />New South Wales, Australia</p>
+      <p class="text-sm">
+        Available for a <span class="underline decoration-dashed"
+          >Remote position</span
+        >
+      </p>
+      <div
+        class="pointer-events-none absolute -top-1/2 left-1/2 size-60 rounded-full bg-amber-700 mix-blend-color-burn blur-3xl"
+      >
+      </div>
+      <div
+        class="pointer-events-none absolute -bottom-1/2 left-0 size-60 rounded-full bg-amber-700 mix-blend-color-burn blur-3xl"
+      >
+      </div>
+      <AustraliaIcon
+        class="pointer-events-none absolute left-1/2 top-1/2 h-48 w-48 -translate-x-1/2 -translate-y-1/2 mix-blend-soft-light"
+      />
+    </Card>
+    <Card fullWidth class="noise relative overflow-hidden">
+      <h2 class="mb-4 text-lg font-bold">What I bring to the table</h2>
+      <p class="text-xs">
+        👉 I specialize in full-stack web development, where I’m comfortable
+        building both efficient frontends and reliable backends. I have
+        experience deploying apps to cloud and setting up CI/CD pipelines. While
+        development is my primary focus, I can also architect cloud solutions
+        when needed, primarily in AWS.
+      </p>
+      <p class="text-xs">
+        Besides my technical skills, I love delivering high-end solutions, and I
+        strive for excellence in everything I build.
+      </p>
+      <div
+        class="pointer-events-none absolute -top-16 left-0 size-32 rounded-full bg-stone-800 mix-blend-plus-lighter blur-3xl"
+      >
+      </div>
+      <div
+        class="pointer-events-none absolute -top-16 left-2/3 size-48 rounded-full bg-stone-800 mix-blend-plus-lighter blur-3xl"
+      >
+      </div>
+      <div
+        class="pointer-events-none absolute -bottom-16 left-1/3 size-48 rounded-full bg-stone-800 mix-blend-plus-lighter blur-3xl"
+      >
+      </div>
+    </Card>
+    <Card class="noise relative overflow-hidden">
+      <h2 class="mb-4 text-lg font-bold">Last role</h2>
+      <p class="mb-2 text-xs">
+        For the past 5 years, I’ve been helping
+        <a
+          href="https://www.linkedin.com/company/akular/"
+          target="_blank"
+          rel="noopener noreferrer">AKULAR</a
+        >
+        build a cutting-edge platform for Digital Twins enhanced with Augmented Reality.
+        During my time, I took on a leadership role, heading the web development
+        team. I've had an opportunity to work with brilliant people, and also unique
+        technologies such as
+        <a
+          href="https://www.babylonjs.com/"
+          target="_blank"
+          rel="noopener noreferrer">Babylon.js</a
+        >
+        and
+        <a href="https://rxdb.info/" target="_blank" rel="noopener noreferrer"
+          >RxDB</a
+        >.
+      </p>
+      <div class="flex items-end justify-end gap-4">
+        <div class="flex flex-col items-end justify-end">
+          <BigRightArrow class="h-16 w-16" />
+          <p class="text-xs"><i>Check it out</i></p>
+        </div>
+        <a
+          href="https://www.linkedin.com/posts/r4pos_ai-ugcPost-7240040530905042945-SVeE"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/akular-app-preview.webp"
+            alt="AKULAR app preview"
+            width="112"
+            class="shadow-xl transition duration-300 ease-in-out hover:rotate-1 hover:scale-110 hover:shadow-2xl"
+          />
+        </a>
+      </div>
+      <div
+        class="pointer-events-none absolute -bottom-8 left-1/2 size-32 rounded-full bg-stone-800 mix-blend-plus-lighter blur-3xl"
+      >
+      </div>
+    </Card>
+    <Card class="noise relative overflow-hidden">
+      <div class="absolute"></div>
+      <h2 class="mb-4 text-lg font-bold">Get in touch</h2>
+      <p class="text-xs">Reach out and let's discuss how I may be of help.</p>
+      <div
+        class="pointer-events-none absolute -bottom-8 left-1/2 size-32 rounded-full bg-stone-800 mix-blend-plus-lighter blur-3xl"
+      >
+      </div>
+    </Card>
+  </main>
+  <footer class="flex justify-center">
+    <span class="text-xs text-neutral-400 dark:text-neutral-500"
+      >v1.0.0 | updated Nov 28, 2024 | Copyright © Juraj Žec {year}</span
+    >
+  </footer>
 </Layout>
