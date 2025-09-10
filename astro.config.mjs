@@ -13,6 +13,11 @@ export default defineConfig({
         access: 'public',
         default: 'N/A',
       }),
+      PUBLIC_VERSION: envField.string({
+        context: 'client',
+        access: 'public',
+        default: 'N/A',
+      }),
     },
   },
   integrations: [
