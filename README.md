@@ -70,7 +70,7 @@ Top-level:
 - tailwind.config.mjs — Tailwind configuration (darkMode: 'selector', custom colors/fonts)
 - tsconfig.json — Extends astro/tsconfigs/strictest; path alias ~/* → src/*
 - prettier.config.mts — Prettier configuration with Astro and Tailwind plugins
-- public/ — Static assets served as-is (e.g., /favicon.svg, /noise.png, /fonts/*)
+- public/ — Static assets served as-is (e.g., favicon, /fonts/*)
 - src/ — Application source
   - pages/
     - index.astro — Main page (site entry route)
