@@ -6,6 +6,9 @@ import tailwind from '@astrojs/tailwind'
 // https://astro.build/config
 export default defineConfig({
   site: 'https://xzec.dev',
+  devToolbar: {
+    enabled: false,
+  },
   env: {
     schema: {
       PUBLIC_UPDATED_AT: envField.string({
