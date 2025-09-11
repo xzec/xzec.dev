@@ -2,7 +2,7 @@
 import '~/base.css'
 import Layout from '~/layouts/Layout.astro'
 import Card from '../components/Card.astro'
-import BigRightArrow from '../assets/BigRightArrow.astro'
+import DashedArrow from '../assets/DashedArrow.astro'
 import { PUBLIC_UPDATED_AT, PUBLIC_VERSION } from 'astro:env/client'
 
 const year = new Date().getUTCFullYear()
@@ -107,7 +107,7 @@ const version = PUBLIC_VERSION
       </p>
       <div class="flex items-end justify-end gap-4">
         <div class="flex flex-col items-end justify-end">
-          <BigRightArrow class="h-16 w-16" />
+          <DashedArrow class="h-16 w-16 rotate-90" />
           <p class="text-xs"><i>check it out</i></p>
         </div>
         <a
