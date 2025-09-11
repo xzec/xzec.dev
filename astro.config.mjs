@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig, envField } from 'astro/config'
 
-import tailwind from '@astrojs/tailwind'
+import tailwindcss from '@tailwindcss/vite'
 
 // https://astro.build/config
 export default defineConfig({
@@ -23,11 +23,9 @@ export default defineConfig({
       }),
     },
   },
-  integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
-  ],
+  vite: {
+    plugins: [tailwindcss()],
+  },
   server: {
     open: true,
     port: 3000,
