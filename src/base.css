@@ -59,7 +59,7 @@
     animation: blink 1.5s steps(1) infinite;
   }
 
-  .wavy-background {
+  .background-pattern {
     background-color: #f3f3ff;
     opacity: 0.8;
     background-image:

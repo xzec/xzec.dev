@@ -8,19 +8,6 @@ export default {
     extend: {
       colors: {
         nightblue: '#0020be',
-        chgreen: {
-          50: '#eefff4',
-          100: '#d7ffe8',
-          200: '#b2ffd2',
-          300: '#76ffb0',
-          400: '#33f587',
-          500: '#09de65',
-          600: '#00a849',
-          700: '#049142',
-          800: '#0a7138',
-          900: '#0a5d30',
-          950: '#003418',
-        },
       },
       fontFamily: {
         mono: ['JetBrainsMono', ...defaultTheme.fontFamily.mono],

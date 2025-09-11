@@ -2,7 +2,6 @@
 import '~/base.css'
 import Layout from '~/layouts/Layout.astro'
 import Card from '../components/Card.astro'
-import AustraliaIcon from '../assets/AustraliaIcon.astro'
 import BigRightArrow from '../assets/BigRightArrow.astro'
 import { PUBLIC_UPDATED_AT, PUBLIC_VERSION } from 'astro:env/client'
 
@@ -20,51 +19,55 @@ const version = PUBLIC_VERSION
     class="flex flex-wrap gap-4 py-4 text-neutral-800 dark:text-neutral-300"
   >
     <Card class="noise relative overflow-hidden">
-      <h2 class="mb-2 text-2xl font-bold">Juraj Žec</h2>
-      <a
-        href="https://en.wikipedia.org/wiki/Juraj"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="mb-8 block text-xs text-neutral-500 no-underline"
-        >"you-rye zhets" (Ž like the "s" in "measure")</a
-      >
-      <p class="text-sm">Software engineer<br />27 yo</p>
+      <div class="mb-8 flex items-start gap-4">
+        <img
+          src="/me.png"
+          alt="me"
+          class="size-full max-h-[72px] max-w-[72px] rounded-full border-white shadow-lg"
+        />
+        <div>
+          <h2 class="mb-2 text-2xl font-bold">Juraj Žec</h2>
+          <a
+            href="https://en.wikipedia.org/wiki/Juraj"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block text-xs text-neutral-500 no-underline"
+            >"you-rye zhets" (Ž like the "s" in "measure")</a
+          >
+        </div>
+      </div>
+      <p class="text-sm">Software engineer<br />28 years old</p>
       <div
         class="pointer-events-none absolute -bottom-8 left-1/2 size-32 rounded-full bg-stone-800 mix-blend-plus-lighter blur-3xl"
       >
       </div>
     </Card>
-    <Card class="noise relative overflow-hidden bg-amber-200">
+    <Card class="noise relative overflow-hidden bg-lime-600">
       <h2 class="mb-4 text-lg font-bold">📍 Location</h2>
-      <p class="mb-4 text-sm">Sydney<br />New South Wales, Australia</p>
-      <p class="text-sm">
-        Available for a <span class="underline decoration-dashed"
-          >Remote position</span
-        >
-      </p>
+      <p class="mb-4 text-sm">South-East Asia</p>
+      <div class="rounded-md bg-lime-950 p-2">
+        <p class="text-sm text-gray-100">
+          Available for a new position starting <span
+            class="underline decoration-dashed">December 1, 2025</span
+          >
+          (Europe)
+        </p>
+      </div>
       <div
-        class="pointer-events-none absolute -top-1/2 left-1/2 size-60 rounded-full bg-amber-700 mix-blend-color-burn blur-3xl"
+        class="pointer-events-none absolute -top-1/2 left-1/2 size-60 rounded-full bg-lime-700 mix-blend-color-burn blur-3xl"
       >
       </div>
       <div
-        class="pointer-events-none absolute -bottom-1/2 left-0 size-60 rounded-full bg-amber-700 mix-blend-color-burn blur-3xl"
+        class="pointer-events-none absolute -bottom-1/2 left-0 size-60 rounded-full bg-lime-500 mix-blend-color-burn blur-3xl"
       >
       </div>
-      <AustraliaIcon
-        class="pointer-events-none absolute left-1/2 top-1/2 h-48 w-48 -translate-x-1/2 -translate-y-1/2 mix-blend-soft-light"
-      />
     </Card>
     <Card fullWidth class="noise relative overflow-hidden">
       <h2 class="mb-4 text-lg font-bold">What I bring to the table</h2>
       <p class="text-xs">
-        I work across the stack: frontend, backend, infra. I build and ship apps
-        end-to-end, from writing code to deployment. I default to aws when
-        architecture is needed. at the end of the day, I strive to build things
-        that are reliable and high quality.
-      </p>
-      <p class="text-xs">
-        Besides my technical skills, I love delivering high-end solutions, and I
-        strive for excellence in everything I build.
+        I work across the stack: frontend, backend, infra. I can navigate the
+        world of software very well, closely watching the newest updates on
+        relevant tools. I work well in teams and solo.
       </p>
       <div
         class="pointer-events-none absolute -top-16 left-0 size-32 rounded-full bg-stone-800 mix-blend-plus-lighter blur-3xl"
@@ -78,18 +81,20 @@ const version = PUBLIC_VERSION
         class="pointer-events-none absolute -bottom-16 left-1/3 size-48 rounded-full bg-stone-800 mix-blend-plus-lighter blur-3xl"
       >
       </div>
+      <!-- -&#45;&#45;&#45;&#45;-->
+      <!--<h3 class="mb-4 text-sm font-bold">More about me</h3>-->
     </Card>
     <Card class="noise relative overflow-hidden">
       <h2 class="mb-4 text-lg font-bold">Last role</h2>
       <p class="mb-2 text-xs">
-        For the past 5y I’ve been helping
+        For 5 years I’ve been helping
         <a
           href="https://www.linkedin.com/company/akular/"
           target="_blank"
           rel="noopener noreferrer">akular</a
         >
         build a digital twin + ar platform. I led the web dev team, worked with brilliant
-        people, and got hands-on with tech like
+        people and got hands-on with tech like
         <a
           href="https://www.babylonjs.com/"
           target="_blank"
@@ -123,19 +128,16 @@ const version = PUBLIC_VERSION
       >
       </div>
     </Card>
-    <Card class="noise relative overflow-hidden">
-      <div class="absolute"></div>
+    <Card
+      class="relative overflow-hidden rounded-3xl border-8 border-dashed border-stone-400 bg-transparent shadow-none dark:bg-transparent"
+    >
       <h2 class="mb-4 text-lg font-bold">Get in touch</h2>
       <p class="text-xs">Reach out and let's discuss how I may be of help.</p>
-      <div
-        class="pointer-events-none absolute -bottom-8 left-1/2 size-32 rounded-full bg-stone-800 mix-blend-plus-lighter blur-3xl"
-      >
-      </div>
     </Card>
   </main>
   <footer class="flex justify-center">
     <span class="text-xs text-neutral-400 dark:text-neutral-500">
-      v{version}| updated {updatedAt} | Copyright © Juraj Žec {year}</span
+      v{version} | updated {updatedAt} | Copyright © Juraj Žec {year}</span
     >
   </footer>
 </Layout>
