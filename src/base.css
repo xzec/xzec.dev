@@ -37,10 +37,10 @@
 }
 
 @utility background-pattern {
-  background-color: #f3f3ff;
+  background-color: var(--color-gray-50);
       background-image:
-    linear-gradient(#efefef 1px, transparent 1px),
-    linear-gradient(to right, #efefef 1px, #f3f3f3 1px);
+    linear-gradient(var(--color-gray-100) 1px, transparent 1px),
+    linear-gradient(to right, var(--color-gray-100) 1px, var(--color-gray-50) 1px);
   background-size: 20px 20px;
 }
 
@@ -59,11 +59,12 @@
     font-style: normal;
     font-display: swap;
   }
+
   html {
     font-family:
       JetBrainsMono, ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo,
       Consolas, 'DejaVu Sans Mono', monospace;
-    background: #f3f3f3;
+    background: var(--color-gray-50);
 
     &.dark {
       color-scheme: dark;
@@ -72,10 +73,14 @@
 
   a {
     text-decoration: underline;
-    color: #1e3af3;
+    color: var(--color-blue-700);
 
     &:hover {
-      color: #009dff;
+      color: var(--color-blue-400);
+    }
+
+    &:where(:focus-visible) {
+      @apply outline-none ring-2 ring-nightblue ring-offset-transparent rounded-xs;
     }
   }
 }

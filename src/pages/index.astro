@@ -1,6 +1,6 @@
 ---
-import '~/base.css'
-import Layout from '~/layouts/Layout.astro'
+import '../base.css'
+import Layout from '../layouts/Layout.astro'
 import Card from '../components/Card.astro'
 import DashedArrow from '../assets/DashedArrow.astro'
 import { PUBLIC_UPDATED_AT, PUBLIC_VERSION } from 'astro:env/client'
@@ -32,7 +32,7 @@ const version = PUBLIC_VERSION
             href="https://en.wikipedia.org/wiki/Juraj"
             target="_blank"
             rel="noopener noreferrer"
-            class="block text-xs text-neutral-500 no-underline"
+            class="block text-xs text-neutral-500 no-underline hover:text-blue-400"
             >"you-rye zhets" (Ž like the "s" in "measure")</a
           >
         </div>
@@ -45,12 +45,12 @@ const version = PUBLIC_VERSION
     </Card>
     <Card class="noise relative overflow-hidden bg-lime-600 dark:bg-lime-700">
       <h2 class="mb-4 text-lg font-bold">📍 Location</h2>
-      <p class="mb-4 text-sm">South-East Asia, based Bratislava</p>
+      <p class="mb-4 text-sm">South-East Asia, based in Europe</p>
       <div
         class="relative z-1 rounded-xl border-2 border-lime-500 bg-lime-950 p-2"
       >
         <p class="text-sm text-gray-100">
-          Available for a new position in <b>Europe</b>, starting <span
+          I am available for a new position starting <span
             class="underline decoration-dashed">December 1, 2025</span
           >.
         </p>
@@ -88,7 +88,7 @@ const version = PUBLIC_VERSION
     </Card>
     <Card class="noise relative overflow-hidden">
       <h2 class="mb-4 text-lg font-bold">Last role</h2>
-      <p class="mb-2 text-sm">
+      <p class="mb-4 text-sm">
         For 5 years I’ve been helping
         <a
           href="https://www.linkedin.com/company/akular/"
@@ -107,7 +107,7 @@ const version = PUBLIC_VERSION
           >rxdb</a
         >.
       </p>
-      <div class="flex items-end justify-end gap-4">
+      <div class="flex items-end justify-center gap-4 sm:justify-end">
         <div class="flex flex-col items-end justify-end">
           <DashedArrow class="h-16 w-16 rotate-90" />
           <p class="text-xs"><i>check it here</i></p>
@@ -121,7 +121,7 @@ const version = PUBLIC_VERSION
             src="/akular-app-preview.webp"
             alt="AKULAR app preview"
             width="112"
-            class="shadow-xl transition duration-300 ease-in-out hover:scale-110 hover:rotate-1 hover:shadow-2xl"
+            class="duration-300 ease-in-out hover:scale-110 hover:rotate-1 hover:shadow-2xl sm:shadow-xl sm:transition"
           />
         </a>
       </div>
@@ -141,20 +141,21 @@ const version = PUBLIC_VERSION
       <p class="mb-2 text-sm">
         Reach out and let's discuss how I may be of help.
       </p>
-      <div class="mt-6 flex justify-center">
+      <div class="my-6 flex justify-center">
         <a
           href="https://www.linkedin.com/in/juraj-zec/"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-white no-underline"
+          class="focus-visible:ring-nightblue rounded-xl text-white no-underline focus-visible:ring-offset-2 focus-visible:ring-offset-stone-100"
         >
           <button
-            class="group bg-nightblue relative inline-flex min-h-10 cursor-pointer items-center justify-center overflow-hidden rounded-xl px-6 py-1 font-medium text-neutral-200 transition hover:scale-110"
+            tabindex="-1"
+            class="group bg-nightblue hover:bg-nightblue/90 relative inline-flex min-h-10 cursor-pointer items-center justify-center overflow-hidden rounded-xl px-6 py-1 font-medium text-neutral-200 transition"
           >
             <span>Message me on LinkedIn</span>
             <ThinArrow class="h-5 w-5 translate-x-2" />
             <span
-              class="absolute inset-0 flex h-full w-full -translate-x-full justify-center group-hover:translate-x-full group-hover:delay-300 group-hover:duration-1000"
+              class="absolute inset-0 flex h-full w-full -translate-x-full justify-center group-hover:translate-x-full group-hover:delay-500 group-hover:duration-1000"
             >
               <span class="relative h-full w-8 -skew-12 bg-white/20"></span>
             </span>
