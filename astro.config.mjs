@@ -3,6 +3,18 @@ import { defineConfig, envField } from 'astro/config'
 
 import tailwindcss from '@tailwindcss/vite'
 
+// inject computed env vars in dev server
+if (process.env.NODE_ENV === 'development') {
+  process.env.PUBLIC_UPDATED_AT = new Date().toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  })
+  process.env.PUBLIC_VERSION = (
+    await import('./package.json', { assert: { type: 'json' } })
+  ).version
+}
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://xzec.dev',
