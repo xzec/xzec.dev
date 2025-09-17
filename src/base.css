@@ -38,8 +38,7 @@
 
 @utility background-pattern {
   background-color: #f3f3ff;
-  opacity: 0.8;
-  background-image:
+      background-image:
     linear-gradient(#efefef 1px, transparent 1px),
     linear-gradient(to right, #efefef 1px, #f3f3f3 1px);
   background-size: 20px 20px;

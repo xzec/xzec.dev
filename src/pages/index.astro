@@ -24,7 +24,7 @@ const version = PUBLIC_VERSION
         <img
           src="/me.png"
           alt="me"
-          class="size-full max-h-[72px] max-w-[72px] rounded-full border-white shadow-lg"
+          class="size-full max-h-[72px] max-w-[72px] rounded-full shadow-lg"
         />
         <div>
           <h2 class="mb-2 text-2xl font-bold">Juraj Žec</h2>
@@ -46,7 +46,9 @@ const version = PUBLIC_VERSION
     <Card class="noise relative overflow-hidden bg-lime-600 dark:bg-lime-700">
       <h2 class="mb-4 text-lg font-bold">📍 Location</h2>
       <p class="mb-4 text-sm">South-East Asia</p>
-      <div class="rounded-md border-2 border-lime-500 bg-lime-950 p-2">
+      <div
+        class="relative z-1 rounded-md border-2 border-lime-500 bg-lime-950 p-2"
+      >
         <p class="text-sm text-gray-100">
           Available for a new position in <b>Europe</b>, starting <span
             class="underline decoration-dashed">December 1, 2025</span
@@ -108,7 +110,7 @@ const version = PUBLIC_VERSION
       <div class="flex items-end justify-end gap-4">
         <div class="flex flex-col items-end justify-end">
           <DashedArrow class="h-16 w-16 rotate-90" />
-          <p class="text-xs"><i>check it out</i></p>
+          <p class="text-xs"><i>check it here</i></p>
         </div>
         <a
           href="https://www.linkedin.com/posts/r4pos_ai-ugcPost-7240040530905042945-SVeE"
@@ -148,9 +150,9 @@ const version = PUBLIC_VERSION
             <span>Message me on LinkedIn</span>
             <ThinArrow class="h-5 w-5 translate-x-2" />
             <span
-              class="absolute inset-0 flex h-full w-full [transform:skew(-12deg)_translateX(-100%)] justify-center group-hover:[transform:skew(-12deg)_translateX(100%)] group-hover:delay-300 group-hover:duration-1000"
+              class="absolute inset-0 flex h-full w-full -translate-x-full justify-center group-hover:translate-x-full group-hover:delay-300 group-hover:duration-1000"
             >
-              <span class="relative h-full w-8 bg-white/20"></span>
+              <span class="relative h-full w-8 -skew-12 bg-white/20"></span>
             </span>
           </button>
         </a>
