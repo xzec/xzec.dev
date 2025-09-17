@@ -24,7 +24,7 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
+    border-color: var(--color-neutral-200, currentcolor);
   }
 }
 
@@ -34,14 +34,19 @@
 
 @utility animate-blink {
   animation: blink 1.5s steps(1) infinite;
-}
+  }
 
 @utility background-pattern {
-  background-color: var(--color-gray-50);
-      background-image:
-    linear-gradient(var(--color-gray-100) 1px, transparent 1px),
-    linear-gradient(to right, var(--color-gray-100) 1px, var(--color-gray-50) 1px);
-  background-size: 20px 20px;
+  background-color: var(--color-neutral-50);
+  background-image: linear-gradient(var(--color-neutral-100) 1px, transparent 1px),
+    linear-gradient(to right, var(--color-neutral-100) 1px, transparent 1px);
+  background-size: 18px 18px;
+
+  :where(.dark) & {
+    background-color: var(--color-neutral-950);
+    background-image: linear-gradient(var(--color-neutral-900) 1px, transparent 1px),
+      linear-gradient(to right, var(--color-neutral-900) 1px, transparent 1px);
+  }
 }
 
 @layer base {
@@ -64,11 +69,16 @@
     font-family:
       JetBrainsMono, ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo,
       Consolas, 'DejaVu Sans Mono', monospace;
-    background: var(--color-gray-50);
+    background: var(--color-neutral-50);
 
     &.dark {
       color-scheme: dark;
+      background: var(--color-neutral-950);
     }
+  }
+
+  body {
+    @apply background-pattern min-h-[100vh];
   }
 
   a {
